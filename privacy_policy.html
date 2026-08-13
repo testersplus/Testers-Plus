@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testers Plus - Privacy Policy</title>
+    <meta name="description" content="Privacy Policy for Testers Plus app and services.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .privacy-content {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 40px;
+            backdrop-filter: blur(12px);
+            margin-bottom: 60px;
+        }
+        .privacy-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            margin-top: 40px;
+            color: var(--brand-primary);
+        }
+        .privacy-content h2:first-child {
+            margin-top: 0;
+        }
+        .privacy-content p, .privacy-content ul {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+        }
+        .privacy-content ul {
+            padding-left: 20px;
+        }
+        .privacy-content li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-glow glow-1"></div>
+    <div class="background-glow glow-2"></div>
+    
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Testers Plus</div>
+            <p class="subtitle">Legal</p>
+            <h1 class="main-title">Privacy <span class="text-gradient">Policy</span></h1>
+            <p class="description">Last updated: <span id="lastUpdated">August 13, 2026</span></p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="privacy-content">
+            <h2>1. Information We Collect</h2>
+            <p>At Testers Plus, we prioritize your privacy. We only collect information that is necessary to provide you with our services. This includes:</p>
+            <ul>
+                <li>Information provided during account registration (e.g., email addresses).</li>
+                <li>Details about the applications you submit for closed testing.</li>
+                <li>Device information and app usage statistics to help us improve the app.</li>
+            </ul>
+
+            <h2>2. How We Use Your Information</h2>
+            <p>Your information is used strictly to facilitate the closed testing process and improve our community experience. We use your data to:</p>
+            <ul>
+                <li>Match apps with testers from our community.</li>
+                <li>Provide support and respond to your inquiries.</li>
+                <li>Enhance the security and functionality of the Testers Plus app.</li>
+            </ul>
+
+            <h2>3. Information Sharing and Disclosure</h2>
+            <p>We do not sell, trade, or rent your personal information to third parties. Your app details and testing URLs are only shared within our secure community of testers as part of the closed testing process you initiated.</p>
+            
+            <h2>4. Data Security</h2>
+            <p>We implement industry-standard security measures to protect your personal information and application details from unauthorized access, alteration, disclosure, or destruction.</p>
+
+            <h2>5. Contact Us</h2>
+            <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
+            <p><strong>Email:</strong> testersplussupport@gmail.com</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Testers Plus. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Set dynamic year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

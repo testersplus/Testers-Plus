@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testers Plus - Closed Testing Setup</title>
+    <meta name="description"
+        content="Step-by-step guide to setting up closed testing for Testers Plus in the Google Play Console.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-glow glow-1"></div>
+    <div class="background-glow glow-2"></div>
+
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Testers Plus</div>
+            <p class="subtitle">Closed Testing Setup Guide</p>
+            <h1 class="main-title">Launch Your App with <span class="text-gradient">Confidence</span></h1>
+            <p class="description">Follow these 4 simple steps in your Google Play Console to prepare your app for
+                14-day closed testing with the Testers Plus community.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Step 1 -->
+        <section class="step-card">
+            <div class="step-content">
+                <div class="step-badge">Step 1</div>
+                <h2>Select All Countries</h2>
+                <p>In Google Play Console, open <strong>Countries/Regions</strong>, select <strong>All countries
+                        (recommended)</strong>, and save the change.</p>
+                <p class="text-muted">This keeps the closed test available for Testers Plus testers in different
+                    regions.</p>
+            </div>
+            <div class="step-image-container">
+                <div class="image-wrapper">
+                    <img src="step_1.png" alt="Selecting all countries in Google Play Console"
+                        onerror="this.src='https://placehold.co/800x500/1e1e1e/333333?text=Add+step_1.png+here'">
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 2 -->
+        <section class="step-card reverse">
+            <div class="step-content">
+                <div class="step-badge">Step 2</div>
+                <h2>Add the Testers Plus Google Group</h2>
+                <p>Go to Play Console &rarr; <strong>Test and release</strong> &rarr; <strong>Testing</strong> &rarr;
+                    <strong>Closed testing</strong>. Open <strong>Testers</strong>, choose <strong>Google
+                        Groups</strong>, and add:</p>
+
+                <div class="code-block">
+                    <code>testerplus@googlegroups.com</code>
+                    <button class="copy-btn" onclick="copyText('testerplus@googlegroups.com')">Copy</button>
+                </div>
+
+                <p class="text-muted">Complete your app bundle, store listing, and content rating before sending the
+                    closed test for review.</p>
+            </div>
+            <div class="step-image-container">
+                <div class="image-wrapper">
+                    <img src="step_2.png" alt="Adding Testers Plus Google Group in closed testing"
+                        onerror="this.src='https://placehold.co/800x500/1e1e1e/333333?text=Add+step_2.png+here'">
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 3 -->
+        <section class="step-card">
+            <div class="step-content">
+                <div class="step-badge">Step 3</div>
+                <h2>Submit Changes for Review</h2>
+                <p>Review the pending changes and click <strong>Send changes for review</strong>. After Google approves
+                    the closed testing release, the tester opt-in link can be shared.</p>
+                <p class="text-muted">Approval time can vary. Keep all release details accurate to avoid delays.</p>
+            </div>
+            <div class="step-image-container">
+                <div class="image-wrapper">
+                    <img src="step_3.png" alt="Submitting closed testing changes for review"
+                        onerror="this.src='https://placehold.co/800x500/1e1e1e/333333?text=Add+step_3.png+here'">
+                </div>
+            </div>
+        </section>
+
+        <!-- Step 4 -->
+        <section class="step-card reverse">
+            <div class="step-content">
+                <div class="step-badge">Step 4</div>
+                <h2>Copy the Tester Opt-in URL</h2>
+                <p>Once the closed test is approved, copy the tester opt-in URL from Play Console and submit that URL in
+                    <strong>Testers Plus</strong>. This is the link testers will use to join your app test.</p>
+                <ul class="styled-list">
+                    <li>Copy the URL exactly as shown in Play Console.</li>
+                    <li>Paste it in the Testers Plus submission screen.</li>
+                    <li>Wait for testers to start joining the closed test.</li>
+                </ul>
+            </div>
+            <div class="step-image-container">
+                <div class="image-wrapper">
+                    <img src="step_4.png" alt="Tester opt-in URL copy location"
+                        onerror="this.src='https://placehold.co/800x500/1e1e1e/333333?text=Add+step_4.png+here'">
+                </div>
+            </div>
+        </section>
+
+        <div class="cta-section">
+            <h2>Ready to start testing?</h2>
+            <p>Ensure all 4 steps are completed properly before submitting to our community.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.boltuix.engvid" class="primary-button">Open
+                Testers Plus App</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Testers Plus. All rights reserved.</p>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        // Set dynamic year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = event.target;
+                const originalText = btn.innerText;
+                btn.innerText = 'Copied!';
+                btn.style.background = '#10b981';
+                btn.style.color = '#ffffff';
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.background = '#e2e8f0';
+                    btn.style.color = '#334155';
+                }, 2000);
+            });
+        }
+
+        // Modal logic
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
+
+        // Add click event to all step images
+        document.querySelectorAll('.image-wrapper img').forEach(img => {
+            img.onclick = function () {
+                modal.classList.add("show");
+                modalImg.src = this.src;
+            }
+        });
+
+        function closeModal() {
+            modal.classList.remove("show");
+        }
+    </script>
+</body>
+
+</html>
